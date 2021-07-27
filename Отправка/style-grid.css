@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+   max-width: 1600px;
+    margin: 0 auto;    
+}
+
+.stripe {
+    background-color: black;
+    height: 120px;
+    display: grid;
+    grid-template-rows: repeat(1, 120px);
+    grid-template-columns: repeat(2, 150px);
+    justify-content: space-evenly; 
+}
+
+.l-Block {
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.r-Block {
+    border: 1px solid white;
+}
+
+.img-block {
+    
+}
+
+.product-block {
+    display: grid;   
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(2, 350px);
+    grid-gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.item {
+    border: 1px solid #000;
+}
+.block-1 {
+    background-image: url(img/man1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.block-2 {
+background-image: url(img/man2.png);
+background-repeat: no-repeat;
+background-size: contain;
+}
+
+.block-3 {
+    background-image: url(img/man3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.block-4 {
+    background-image: url(img/man4.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.block-5 {
+    background-image: url(img/man5.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.block-6 {
+    background-image: url(img/man6.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media screen and (max-width: 768px) {
+    .product-block {
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(3, 350px);
+    }
+}
