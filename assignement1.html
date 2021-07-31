@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+        let Tc = prompt("Веедите температуру в градусах Цельсия")
+        let Tf = (9 / 5) * Tc + 32;
+        alert(Tf);
+
+        let admin = null;
+        let name = "Василий";
+        admin = name;
+        alert(admin); /* почему-то не в консоли не выводит команду console.log(admin)  А должна? */
+
+
+        /*результат: 2010 - складывает первые две десятки и к ним прибавляет строку 10 */
+        let result = 10 + 10 + "10";
+        alert(result);
+
+        /*результат: 101010 - складывает слева направо цифру десять и строку 10 и к строке 1010 прибавляет цифру 10 */
+        result = 10 + "10" + 10;
+        alert(result);
+
+        /*результат: 30 - складывает слева направо десятки и прибавляет цифру 10, преобразованную из строки в цифру унарным плюсом */
+        result = 10 + 10 + +"10";
+        alert(result);
+
+        // Результат -Infinity  поскольку делит на -пробел или -0
+        result = 10 / -"";
+        alert(result);
+
+        /* Рузультат NaN, . т.е "не число", т.к. число делится на строку, поскольку унарным плюсом строка 2,5 из-за запятой не может быть переведена в число, надо 2.5 */
+        result = 10 / +"2,5";
+        alert(result);
+
+
+    </script>
+</body>
+
+</html>
