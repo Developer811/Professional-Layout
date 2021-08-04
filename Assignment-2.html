@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+// пример 1.1
+    let a = 1, b = 1, c, d;
+    c = ++a;    
+    alert("Пример 1.1. Это c = ++a = " + c); // ответ: 2 , потому что это инкремент, префиксная форма, т.е. ++ прибавляет к переменной а единицу и выводит  её НОВОЕ значение
+    alert("Это новое значение а = " + a) // Переменная а увеличилась на 1 и = 2
+    
+    //пример 1.2
+    d = b++;
+    alert("Пример 1.2. Это d = b++ = " + d); /* ответ: 1, потому что это инкремент, постфиксная форма, т.е. ++ прибавляет к переменной b единицу, т.е. теперь b=2, но отдаёт её СТАРОЕ значение b = 1 */
+    
+    //пример 1.3
+    c = 2 + ++a;
+     alert("Пример 1.3. Это c = 2 + ++a = " + c); //ответ: 5, потому что это инкремент, префиксная форма, а = 2 и опять на 1 увеличили, т.е. теперь а = 3
+     alert("Это подтверждение, что предыдущее значение а = 2 увеличилось на 1 и равно теперь  " + a)
+    
+     //пример 1.4
+    d = 2 + b++;
+    alert("пример 1.4. Это  d = " + d); /* ответ: 4,  потому что это инкремент, постфиксная форма, т.е. ++ прибавляет к переменной b=2 единицу, т.е.  теперь b=3, но отдаёт её СТАРОЕ значение b=2 */
+    alert("Это  последнее значение a = " + a); //3
+    alert("Это  последнее значение b = " + b); //3
+
+
+// пример 2 
+    let f = 2; 
+    let x = 1 + (f *= 2);
+    alert("Пример 2. Это переменная x =  " + x); // ответ: 5, потому что это инкремент, префиксная форма, f умножается на 2 => f=4 
+
+
+
+// пример 3
+    let k = +prompt("Пример 3. Ввведите первое число");
+    let l = +prompt("Ввведите второе число");
+
+if (k > 0 && l > 0) {
+    alert(" Это разность положитеьных чисел = " + (k - l));
+} else if (k < 0 && l < 0) {
+    alert(" Это произведение отрицательных чисел = " + (k * l));
+} else if (k > 0 && l < 0 || k < 0 && l > 0) {
+   alert("Это сумма чисел с разными знаками" + (k + l));
+} else if (k == 0 || l == 0) {
+    alert("Это дополнительная опция. Умножение на ноль даёт ноль. Пожалйуста: " + "1-е число = " + k + ";  2-е число = " + l + ";  В итоге произведение равно " + (k * l) + ". А Это результат сложения: " + (k + l) + " и вычитания: " + (k - l));
+}
+
+
+// пример 4
+let num1 = +prompt("Пример 4. Введите первое число");
+let num2 = +prompt("Введите второе число");
+
+function addNum(num1, num2) {
+    let result = num1 + num2;
+    return(result);
+}
+let addResult = addNum(num1, num2);
+alert("Пример 4. Это результат работы функции, вычисляющей сумму двух чисел. Сумма = " + addResult);
+
+    
+function multiplyNum(num1, num2) {
+        let result = num1 * num2;
+        return (result);
+    }
+    addResult = multiplyNum(num1, num2);
+    alert("Пример 4. Это результат работы функции, вычисляющей произведение двух чисел. Произведение = " + addResult);
+
+
+    function subtractNum(num1, num2) {
+        let result = num1 - num2;
+        return (result);
+    }
+    addResult = subtractNum(num1, num2);
+    alert("Пример 4. Это результат работы функции, вычисляющей разность двух чисел. Разность = " + addResult);
+
+    function devideNum(num1, num2) {
+        let result = num1 / num2;
+        return (result);
+    }
+    addResult = devideNum(num1, num2);
+    alert("Пример 4. Это результат работы функции, вычисляющей частное от деления двух чисел. Частное = " + addResult);
+
+
+    // пример 5
+    let arg1 = +prompt("Пример 5. Введите первое число");
+    let arg2 = +prompt("Введите второе число");
+    let operation = prompt("Введите название математической операции, например: сложение, деление и т.п.");
+    let result = 0;
+  
+    let finalResult = mathOperation(arg1, arg2, operation);
+    alert("Результат выичления по операции " + operation + " = " + finalResult);
+
+
+
+function mathOperation(num1, num2, operation) {
+    switch (operation) {
+        case 'сложение':
+            result = addNum(num1, num2); 
+            return (result);       
+            break;
+        case 'вычитание':
+             result = subtractNum(num1, num2); 
+             return(result);  
+            break;   
+        case 'умножение':
+            result = multiplyNum(num1, num2)
+            return (result);
+            break;
+        case 'деление':
+            result = devideNum(num1, num2)
+            return (result);
+            break;
+        default:
+            break;
+    }
+} 
+
+
+
+
+
+
+    </script>
+</body>
+</html>
