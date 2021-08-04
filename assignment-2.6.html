@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=script, initial-scale=1.0">
+    <title>Assignment 2.6</title>
+</head>
+
+<body>
+    <script>
+'use strict'
+
+let sum = +prompt("Введите сумму, которую вы хотите положить на счёт, в целых рублях (без копеек)");
+let str = String(sum);
+
+if (sum == 0) {
+    sum = +prompt("Вы не ввели сумму. Введите сумму, которую вы хотите положить на счёт)");
+}
+if (sum % 1 !== 0) {
+    sum = +prompt("Вы ошиблись! Введите сумму, которую вы хотите положить на счёт, в ЦЕЛЫХ рублях (БЕЗ копеек)");
+}
+
+let sumLength = str.length; 
+
+let lastNum = str.charAt(sumLength - 1);
+let preLastNum = str.charAt(sumLength - 2); 
+
+if (preLastNum == 1) {
+    alert("Вы хотите положить на счёт " + sum + " рублей");
+    alert("Ваша сумма в " + sum + " рублей успешно зачислена.");
+} else {
+    switch (lastNum) {
+        case '1':
+            alert("Вы хотите положить на счёт " + sum + " рубль.");
+            alert("Ваша сумма в " + sum + " рубль успешно зачислена.");
+            break;
+        case '2':
+        case '3':
+        case '4': 
+            alert("Вы хотите положить на счёт " + sum + " рубля");
+            alert("Ваша сумма в " + sum + " рубля успешно зачислена.");
+            break;
+        case '0':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9': 
+            alert("Вы хотите положить на счёт " + sum + " рублей");
+            alert("Ваша сумма в " + sum + " рублей успешно зачислена.");
+            break;
+        default:
+            break;
+    }
+}
+    </script>
+</body>
+</html>
