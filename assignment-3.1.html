@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        'use strict';
+
+        // пример 1
+
+        let arr = [" - Это ноль", " - Чётное число", " - Нечётное число"];
+
+        for (let i = 0; i <= 10; i++) {
+            if (i == 0) {
+                alert(i + "" + arr[i]);
+            } else if (i % 2 == 0) {
+                alert(i + "" + arr[1]);
+            } else {
+                alert(i + "" + arr[2]);
+            }
+        }
+
+        console.log("Вариант учителя");
+
+        for (let i = 0; i <= 10; i++) {
+            if (i == 0) {
+                console.log(i + " - это ноль");
+            } else if (i % 2 == 0) {
+                console.log(i + " - это чётное число");
+            } else {
+                console.log(i + " - это НЕ чётное число");
+            }
+        }
+
+    </script>
+</body>
+</html>
