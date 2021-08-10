@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+'use strict';
+
+    // пример 3 
+
+    const products = [
+        {
+            id: 3,
+            price: 200,
+        },
+        {
+            id: 4,
+            price: 900,
+        },
+        {
+            id: 1,
+            price: 1000,
+        },
+    ];
+
+
+    products.forEach(item => {
+        item.price = item.price * 0.75;
+    });
+
+    console.log(products);
+
+    
+    // мой вариант
+    
+    let explainText = ["Первая цена - ", "Вторая цена - ", "Третья цена - "];
+
+    for (let i = 0; i < products.length; i++) {
+        alert(explainText[i] + products[i].price);
+    }
+
+
+    // Игорь, если будет у вас время, почему в варианте ниже итерация идёт 6 раз, а не 3, как задано в цикле?
+
+    /* function discountPrice(params) {
+        for (let i = 0; i < products.length; i++) {
+            let newPrice = products[i].price * 0.75;
+            products[i].price = newPrice;
+            alert(newPrice);
+        }
+    }
+
+    products.forEach(discountPrice);
+
+    */
+
+    </script>
+</body>
+</html>
