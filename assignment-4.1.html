@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+    let num = +prompt("Введите число в диапазоне от 0 до 999");
+
+    function getDigitsOfNumber(num) {
+        if (!Number.isInteger(num) || num < 0 || num > 999) {
+        console.log('Вводимое число должно быть целым в диапазоне от 0 до 999.');
+        return {};
+        }
+
+        return {
+        units: num % 10,
+        hundereds: Math.floor(num / 100),
+        tens: Math.floor(num / 10) % 10,
+        };
+    }
+
+    console.log(getDigitsOfNumber(num));
+
+
+
+
+
+   // У меня только так что-то получилось, как ни пыжился.   
+
+    /*  let j = 0;
+        let k = 0;
+        let l = 0; 
+        let m = 0; 
+        let n = 0;
+        let o = 0;
+
+        let number = +prompt("Введите целое число в диапазоне от 0 до 999");
+        
+        if (number > 0 && number < 10) {
+            console.log("units: " + number + ',');
+            console.log("tens: " + 0 + ','); 
+            console.log("hundreds: " + 0 + '.');
+        } else if (number >= 10 && number < 100) {
+            j = number / 10;
+            l = Math.floor(j);
+            k = (j - l) * 10;
+            k = Math.round(k);
+                       
+            console.log("un: " + k + ',');
+            console.log("tens: " + l + ',');
+            console.log("hundreds: " + 0 + '.');
+        } else if (number >= 100 && number < 999) {
+            j = number / 100;
+            l = Math.floor(j);
+            k = (j - l) * 10;
+            k = Math.floor(k);
+            m = number / 10;
+            n = Math.floor(m);
+            o = (m - n) * 10;
+            o = Math.round(o);
+            console.log("units: " + o + ',');
+            console.log("tens: " + k + ',');
+            console.log("hundreds: " + l + '.');
+    }
+    */
+    
+    
+    
+    
+    
+    
+    
+    </script>
+
+</body>
+</html>
