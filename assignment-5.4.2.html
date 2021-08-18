@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<img src="https://placeimg.com/1000/1000/animals" alt="">
+<img src="https://placeimg.com/1000/1000/arch" alt="">
+<img src="https://placeimg.com/1000/1000/nature" alt="">
+<img src="https://placeimg.com/1000/1000/people" alt="">
+<img src="https://placeimg.com/1000/1000/tech" alt="">
+<img src="https://placeimg.com/1000/1000/tech/grayscale" alt="">
+<img src="https://placeimg.com/1000/1000/tech/sepia" alt="">
+
+<!-- Задание. Дождитесь когда все картинки загрузятся (событие load) и
+    покажите с помощью alert сообщение: "все картинки загружены". -->
+
+<script>
+    'use strict';
+    window.addEventListener('load', function () {
+        alert("все картинки загружены");
+    });
+
+
+/* Надо будет почитать/посмотреть. Не вполне понятна механика. 'load' проверяющая ф-я что ли * /
+
+
+
+    /* или так: */
+
+    /*for (let i = 0; i < document.images.length; i++) {
+        document.images[i].addEventListener('load', imageLoaded);
+    }
+
+    let currentCountOfLoadedImages = 0;
+
+    function imageLoaded() {
+        ++currentCountOfLoadedImages;
+        if (currentCountOfLoadedImages === document.images.length) {
+            alert("все картинки загружены");
+        }
+    }*/
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a href="#" id="one">link1</a>
+    <a href="#" id="two">link2</a>
+    <a href="#" id="three">link3</a>
+    <a href="#" id="four">link4</a>
+
+    <!-- Используя поиск по id, получаем ссылку с текстом link4 и выведим ее в консоль. Для закрепления сделал и для остальных -->
+
+    <script>
+        'use strict';
+        let link = document.getElementById('four');
+        console.log(link);
+
+        console.log("Это для закрепления");
+
+        link = document.getElementById('three');
+        console.log(link);
+
+        link = document.getElementById('two');
+        console.log(link);
+
+        link = document.getElementById('one');
+        console.log(link);
+
+    </script>
+
+</body>
+
+</html>
