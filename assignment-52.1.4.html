@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="one two three"></div>
+
+    <!--        
+        1. Сохраняет в переменную тег div.
+        2. В созданную переменную classes сохраняет значение свойства classList.
+        3. C помощью forEach переберает classes и выведит каждый класс в консоль.  -->
+
+    <script>
+        'use strict';
+        let div = document.querySelector('div');
+        let classes = div.classList;
+        classes.forEach(function (klass) {
+            console.log(klass);
+        });
+    </script>
+</body>
+
+</html>

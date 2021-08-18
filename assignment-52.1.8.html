@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <b>Lorem, ipsum.</b>
+    <b class="sign">Lorem, ipsum.</b>
+    <b class="sign">Lorem, ipsum.</b>
+    <b>Lorem, ipsum.</b>
+
+    <!-- 
+      
+        1. Получает все теги b.
+        2. С помощью метода contains() из classList, проверяет, есть ли у тега класс sign, и если нет, то тогда добавляет с помощью метода add()   -->
+
+    <script>
+        'use strict';
+        let bElems = document.querySelectorAll('b');
+        bElems.forEach(function (b) {
+            if (!b.classList.contains('sign')) {
+                b.classList.add('sign');
+                            }
+        });
+
+        console.log(bElems);
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="one" class="btn">Кнопка 1</button>
+    
+    <!-- 
+        1. Полуает кнопку и сохраняет ее в переменную.
+        2. Назначает кнопке обработку клика.
+        3. У функции-обработчика клика делает параметр event
+        4. При клике из event.target выводит в консоль: id, имя класса (используя свойство className), текст на кнопке.  -->
+    
+    <script>
+        'use strict';
+        let button = document.querySelector('button');
+        button.addEventListener('click', function (event) {
+            console.log(event.target.id, event.target.className, event.target.innerText);
+        });
+    </script>
+</body>
+</html>

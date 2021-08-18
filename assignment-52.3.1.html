@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>Кнопка</button>
+    <textarea></textarea>
+
+    <!-- Делает с помощью javascript размер шрифта в кнопке в px, вводимого через prompt а в textarea - вводимый фон. Использует свойство style у каждого из элементов. -->
+
+    <script>
+        'use strict';
+        let button = document.querySelector('button');
+        let size = prompt("Введите размер кнопки в пикселях, например 40px")
+        button.style.fontSize = size;
+        let textarea = document.querySelector('textarea');
+        let color = prompt("Введите цвет области, например red, blue, green и т.п.")
+        textarea.style.background = color;
+    </script>
+</body>
+
+</html>
